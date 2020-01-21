@@ -8,7 +8,7 @@ const getAll = (request, h) => {
 }
 
 const save = () => {
-    return 'Oi'
+    return 'funcao save'
 }
 
 module.exports = {
