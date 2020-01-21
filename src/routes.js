@@ -1,14 +1,21 @@
+//importa as handlers do product.js
 const productHandler = require('./handlers/product')
 
 module.exports = [
     {
         method: 'GET',
-        path: '/products',
+        path: '/',
+        handler: productHandler.helloWorld
+        
+    },
+    {
+        method: 'GET',
+        path: '/api/v1/products',
         handler: productHandler.getAll
     },
      {
          method: 'POST',
-         path: '/products',
+         path: '/api/v1/products',
          handler: productHandler.save
      }
 ]
