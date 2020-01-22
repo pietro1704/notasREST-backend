@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>e-commerce - Programador a bordo</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>Produto</tr>
+            <tr>Preco</tr>
+            <tr>&nbsp;</tr>
+        </thead>
+        <tbody>
+            <% products.forEach(function(product){%>
+            <tr>
+                <td><%= product.attributes.name%></td>
+                <td><%= product.attributes.price%></td>
+                <td><%= product.attributes.name%></td>
+                <td><a class="btn-excluir" href="http://localhost:3000<%=product.links.self %>">Excluir Produto</a></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <script>
+        const productList = document.querySelector('table')
+        productList.addEventListener('click', (event) => {
+            event.preventDefault()
+            const btnExcluir = event.target
+            
+            if (btnExcluir.classList.contains('btn-excluir')) {
+                const url = btnExcluir.href
+                fetch(url, {
+                    method: 'DELETE'
+                }).then(()=>{
+                    btnExcluir.parentNode.parentNode.remove()
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>

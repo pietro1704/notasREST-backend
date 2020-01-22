@@ -11,6 +11,7 @@
     "url": "git+https://github.com/pietro1704/notasREST.git"
   },
   "dependencies": {
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.8"
