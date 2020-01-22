@@ -1,2 +1,6 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27018/ecommerce-api', {useNewUrlParser: true});
+
+mongoose.connect('mongodb+srv://pietro:senha123@jsrest-h4gjt.gcp.mongodb.net/test?retryWrites=true&w=majority',
+    { useNewUrlParser: true },
+    () => console.log('connected to db!')
+);
