@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index"
+    "start": "node src/index"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pietro1704/notasREST.git"
+    "url": "git+https://github.com/pietro1704/notasREST-backend.git"
   },
   "author": "Pietro Pugliei",
   "license": "ISC",
@@ -20,7 +20,8 @@
   "dependencies": {
     "@hapi/hapi": "^19.0.5",
     "express": "^4.17.1",
-    "mongoose": "^5.8.9"
+    "mongoose": "^5.8.9",
+    "nodemon": "^2.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
